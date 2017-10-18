@@ -28,10 +28,10 @@ ARCHITECTURE base OF ram IS
 												30 => "11111111",								-- valeur exemple
 												OTHERS => "UUUUUUUU"							-- valeur exemple
 										  );
-	SIGNAL sortieInterieure : std_logic_vector(7 DOWNTO 0);										-- Sortie intermédiaire pour faire cohabiter l'RD et le temps d'accès
+	SIGNAL sortieInterieure : std_logic_vector(7 DOWNTO 0);										-- Sortie intermédiaire pour faire cohabiter le RD et le temps d'accès
 
 BEGIN
-	PROCESS(CS, RD, adresse, sortieInterieure)
+	PROCESS(CS, RD, WR, entree, adresse, sortieInterieure, memoire)
 	BEGIN
 		IF CS = '0' THEN																		-- Puce sélectionnée
 			sortieInterieure <= memoire(to_integer(unsigned(adresse))) AFTER TEMPS_ACCES_RAM;

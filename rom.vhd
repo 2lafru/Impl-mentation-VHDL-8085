@@ -11,10 +11,10 @@ ENTITY rom IS
 		taille : integer := 64
 		);
 	PORT(
-		CS : IN std_logic;																		-- Sélectionner la puce
-		OE : IN std_logic;																		-- Activer la sortie
-		adresse : IN std_ulogic_vector(integer(ceil(log2(real(taille)))) DOWNTO 0);
-		sortie : OUT std_logic_vector(7 DOWNTO 0)
+		CS : 		IN std_logic;																-- Sélectionner la puce
+		OE : 		IN std_logic;																-- Activer la sortie
+		adresse : 	IN std_ulogic_vector(integer(ceil(log2(real(taille)))) DOWNTO 0);
+		sortie : 	OUT std_logic_vector(7 DOWNTO 0)
 		);
 END rom;
 
