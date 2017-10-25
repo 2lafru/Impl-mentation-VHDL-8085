@@ -4,7 +4,7 @@ use ieee.Numeric_Std.all;
 use ieee.math_real."ceil";
 use ieee.math_real."log2";
 library work;
-use work.tempsAcces.all;
+use work.valeursMemoires.all;
 
 ENTITY ram IS
 	GENERIC(
