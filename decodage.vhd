@@ -19,7 +19,7 @@ ENTITY decodeurAdresse IS
 		adresseram3 :	OUT std_logic_vector(integer(ceil(log2(real(taille_RAM)))) DOWNTO 0) := (OTHERS => 'U')
 		);
 END decodeurAdresse;
-	
+
 ARCHITECTURE base OF decodeurAdresse IS
 BEGIN
 	PROCESS(adresse)
